@@ -70,6 +70,18 @@ public interface LoginScreenConfig extends Config
 	void username(String key);
 
 	@ConfigItem(
+			position = 2,
+			keyName = "storePassword",
+			name = "Password",
+			secret = true,
+			description = "Prompt to save password to local file."
+	)
+	default boolean password()
+	{
+		return false;
+	}
+
+	@ConfigItem(
 		keyName = "loginScreen",
 		name = "Custom Background",
 		description = "Force the login screen to use an image from the past instead of the current one."
