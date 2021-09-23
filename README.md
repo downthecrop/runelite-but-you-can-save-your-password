@@ -1,27 +1,34 @@
 ![](https://runelite.net/img/logo.png)
-# runelite [![CI](https://github.com/runelite/runelite/workflows/CI/badge.svg)](https://github.com/runelite/runelite/actions?query=workflow%3ACI+branch%3Amaster) [![Discord](https://img.shields.io/discord/301497432909414422.svg)](https://discord.gg/ArdAhnN)
+# RuneLite But You Can Save Your Password (BYCSYP)
 
-RuneLite is a free, open source OldSchool RuneScape client.
+RuneLite is a free, open source OldSchool RuneScape client... that didn't let you save your password and now you can!
 
-If you have any questions, please join our IRC channel on [irc.rizon.net #runelite](http://qchat.rizon.net/?channels=runelite&uio=d4) or alternatively our [Discord](https://discord.gg/ArdAhnN) server.
+The official stance from the RuneLite team is that this isn't a feature they are interested in adding (See [#13652](https://github.com/runelite/runelite/pull/13652) and [#249](https://github.com/runelite/plugin-hub/pull/249)) That's completely fine! We can create a fork of the project!
 
-## Project Layout
+Isn't that a security risk?
+  - Do you leave your password manager logged in? Yes?
+  - Do you leave RS on your phone logged in? Yes?
+  - Do you have the RuneScape Steam client linked with your Steam account that auto logs in? Yes?
 
-- [cache](cache/src/main/java/net/runelite/cache) - Libraries used for reading/writing cache files, as well as the data in it
-- [http-api](http-api/src/main/java/net/runelite/http/api) - API for api.runelite.net
-- [http-service](http-service/src/main/java/net/runelite/http/service) - Service for api.runelite.net
-- [runelite-api](runelite-api/src/main/java/net/runelite/api) - RuneLite API, interfaces for accessing the client
-- [runelite-client](runelite-client/src/main/java/net/runelite/client) - Game client with plugins
+Yes. Saving your password to disk is not super secure. We are trading a little security for a lot of convenience. Just enable an authenticator and type that in once a month.
 
-## Usage
+## How To Install RuneLite (BYCSYP)
 
-Open the project in your IDE as a Maven project, build the root module and then run the RuneLite class in runelite-client.  
-For more information visit the [RuneLite Wiki](https://github.com/runelite/runelite/wiki).
+[Wiki](https://github.com/downthecrop/runelite-but-you-can-save-your-password/wiki/How-To-Install-RuneLite-(BYCSYP))
 
-### License
+## How To Save Your Password In RuneLite (BYCSYP)
 
-RuneLite is licensed under the BSD 2-clause license. See the license header in the respective file to be sure.
+[Wiki](https://github.com/downthecrop/runelite-but-you-can-save-your-password/wiki/How-To-Save-Your-Password-In-RuneLite-(BYCSYP))
 
-## Contribute and Develop
+## Setup Guide / How To
 
-We've set up a separate document for our [contribution guidelines](https://github.com/runelite/runelite/blob/master/.github/CONTRIBUTING.md).
+1. Open the plugins panel, search or `password` or `login`
+2. Select `Login Screen`
+3. Enable the toggle inside the Login Screen plugin
+4. Enter/Paste your password into the popup window
+5. Click save.
+6. Login
+
+## Indepth Description of the Plugin Workflow
+
+Placeholder for YT Video
