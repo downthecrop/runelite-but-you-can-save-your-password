@@ -1,5 +1,5 @@
 ![](https://runelite.net/img/logo.png)
-# RuneLite But You Can Save Your Password (BYCSYP)
+# RuneLite But You Can Save Your Password (BYCSYP) [![CI](https://github.com/downthecrop/runelite-but-you-can-save-your-password/actions/workflows/CI.yml/badge.svg?branch=1.7.24)](https://github.com/downthecrop/runelite-but-you-can-save-your-password/actions/workflows/CI.yml)
 
 RuneLite is a free, open source OldSchool RuneScape client... that didn't let you save your password and now you can!
 
