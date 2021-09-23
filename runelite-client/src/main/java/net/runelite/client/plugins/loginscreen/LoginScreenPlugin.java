@@ -95,16 +95,12 @@ public class LoginScreenPlugin extends Plugin implements KeyListener
 		JFrame frame = new JFrame();
 		JPanel panel = new JPanel();
 		JButton button = new JButton("Save");
-		frame.setTitle("Save Password");
-		frame.setIconImage(ClientUI.ICON);
-		JPasswordField textField = new JPasswordField("password");
-		panel.add(textField);
-		frame.setLocationRelativeTo(null);
+		JPasswordField passwordField = new JPasswordField("placeholder");
 		button.addActionListener(e ->
 		{
 			try
 			{
-				setPassword(String.valueOf(textField.getPassword()));
+				setPassword(String.valueOf(passwordField.getPassword()));
 			}
 			catch (IOException ioException)
 			{
@@ -112,7 +108,12 @@ public class LoginScreenPlugin extends Plugin implements KeyListener
 			}
 			frame.setVisible(false);
 		});
+		panel.add(passwordField);
 		panel.add(button);
+		frame.setTitle("Save Password");
+		frame.setIconImage(ClientUI.ICON);
+		frame.setAlwaysOnTop (true);
+		frame.setLocationRelativeTo(null);
 		frame.add(panel);
 		frame.pack();
 		frame.setVisible(true);
@@ -165,7 +166,9 @@ public class LoginScreenPlugin extends Plugin implements KeyListener
 		try
 		{
 			BufferedReader reader = new BufferedReader(new FileReader(PASSWD_FILE));
-			return reader.readLine();
+			String password = reader.readLine();
+			reader.close();
+			return password;
 		}
 		catch (IOException ioException)
 		{

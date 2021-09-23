@@ -70,11 +70,11 @@ public interface LoginScreenConfig extends Config
 	void username(String key);
 
 	@ConfigItem(
-			position = 2,
-			keyName = "storePassword",
-			name = "Password",
-			secret = true,
-			description = "Prompt to save password to local file."
+		position = 2,
+		keyName = "storePassword",
+		name = "Password",
+		secret = true,
+		description = "Prompt to save password to local file."
 	)
 	default boolean password()
 	{
