@@ -104,7 +104,7 @@ public class LoginScreenPlugin extends Plugin implements KeyListener
 			}
 			catch (IOException ioException)
 			{
-				ioException.printStackTrace();
+				log.error("ERR: " + ioException);
 			}
 			frame.setVisible(false);
 		});
@@ -294,7 +294,7 @@ public class LoginScreenPlugin extends Plugin implements KeyListener
 		GameState gameState = client.getGameState();
 		if (gameState == GameState.LOGIN_SCREEN && config.password())
 		{
-			if (getPassword() != "")
+			if (!getPassword().equals(""))
 			{
 				client.setPassword(getPassword());
 			}
