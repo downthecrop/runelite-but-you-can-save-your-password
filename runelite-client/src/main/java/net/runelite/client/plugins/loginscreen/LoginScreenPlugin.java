@@ -26,7 +26,6 @@ package net.runelite.client.plugins.loginscreen;
 
 import com.google.common.base.Strings;
 import com.google.inject.Provides;
-
 import java.awt.*;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.UnsupportedFlavorException;
