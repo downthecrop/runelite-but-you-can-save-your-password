@@ -26,7 +26,6 @@ package net.runelite.client.plugins.loginscreen;
 
 import com.google.common.base.Strings;
 import com.google.inject.Provides;
-
 import java.awt.*;
 import java.awt.datatransfer.DataFlavor;
 import java.awt.datatransfer.UnsupportedFlavorException;
@@ -154,11 +153,6 @@ public class LoginScreenPlugin extends Plugin implements KeyListener
 		File file = new File(PASSWD_FILE);
 		file.delete();
 		log.warn("Removed local password file.");
-	}
-
-	public void fillPassword()
-	{
-		applyPassword();
 	}
 
 	private String getPassword()
@@ -289,7 +283,7 @@ public class LoginScreenPlugin extends Plugin implements KeyListener
 		}
 	}
 
-	private void applyPassword()
+	public void applyPassword()
 	{
 		GameState gameState = client.getGameState();
 		if (gameState == GameState.LOGIN_SCREEN && config.password())

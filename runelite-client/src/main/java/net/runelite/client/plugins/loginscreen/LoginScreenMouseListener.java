@@ -17,7 +17,7 @@ public class LoginScreenMouseListener implements MouseListener
 	@Override
 	public MouseEvent mouseClicked(MouseEvent mouseEvent)
 	{
-		plugin.fillPassword();
+		plugin.applyPassword();
 		return mouseEvent;
 	}
 
