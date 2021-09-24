@@ -29,10 +29,10 @@ jobs:
         run: ./ci/build.sh
         
       - name: Checksum Client Build
-        run: sha256sum /home/runner/work/runelite-but-you-can-save-your-password/runelite-but-you-can-save-your-password/runelite-client/target/*.jar
+        run: echo RuneLite.jar `sha256sum sha256sum /home/runner/work/runelite-but-you-can-save-your-password/runelite-but-you-can-save-your-password/runelite-client/target/*-shaded.jar | cut -d' ' -f1` 
         
       - name: Upload a Build Artifact
         uses: actions/upload-artifact@v2.2.4
         with:
           name: RuneLite.jar
-          path: /home/runner/work/runelite-but-you-can-save-your-password/runelite-but-you-can-save-your-password/runelite-client/target/*.jar
+          path: /home/runner/work/runelite-but-you-can-save-your-password/runelite-but-you-can-save-your-password/runelite-client/target/*-shaded.jar
