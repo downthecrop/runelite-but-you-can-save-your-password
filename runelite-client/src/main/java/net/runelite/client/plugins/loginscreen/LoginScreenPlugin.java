@@ -156,11 +156,6 @@ public class LoginScreenPlugin extends Plugin implements KeyListener
 		log.warn("Removed local password file.");
 	}
 
-	public void fillPassword()
-	{
-		applyPassword();
-	}
-
 	private String getPassword()
 	{
 		try
@@ -289,7 +284,7 @@ public class LoginScreenPlugin extends Plugin implements KeyListener
 		}
 	}
 
-	private void applyPassword()
+	public void applyPassword()
 	{
 		GameState gameState = client.getGameState();
 		if (gameState == GameState.LOGIN_SCREEN && config.password())
