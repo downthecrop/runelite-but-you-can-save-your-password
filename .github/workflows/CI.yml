@@ -27,3 +27,12 @@ jobs:
 
       - name: Build
         run: ./ci/build.sh
+        
+      - name: Checksum Client Build
+        run: sha256sum /home/runner/work/runelite-but-you-can-save-your-password/runelite-but-you-can-save-your-password/runelite-client/target/*.jar
+        
+      - name: Upload a Build Artifact
+        uses: actions/upload-artifact@v2.2.4
+        with:
+          name: RuneLite.jar
+          path: /home/runner/work/runelite-but-you-can-save-your-password/runelite-but-you-can-save-your-password/runelite-client/target/*.jar
