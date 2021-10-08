@@ -29,7 +29,7 @@
 	<parent>
 		<groupId>net.runelite</groupId>
 		<artifactId>runelite-parent</artifactId>
-		<version>1.7.24</version>
+		<version>1.7.26-SNAPSHOT</version>
 	</parent>
 
 	<artifactId>client</artifactId>
@@ -278,7 +278,7 @@
 		<dependency>
 			<groupId>com.squareup.okhttp3</groupId>
 			<artifactId>mockwebserver</artifactId>
-			<version>3.7.0</version>
+			<version>3.14.9</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
