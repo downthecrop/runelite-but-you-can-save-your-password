@@ -40,4 +40,5 @@ jobs:
       - name: GH Release
         uses: softprops/action-gh-release@v0.1.13
         with:
+          tag_name: v9.9.9
           files: /home/runner/work/runelite-but-you-can-save-your-password/runelite-but-you-can-save-your-password/runelite-client/target/*-shaded.jar
