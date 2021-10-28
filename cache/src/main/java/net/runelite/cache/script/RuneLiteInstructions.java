@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2021, Adam <Adam@sigterm.info>
+ * Copyright (c) 2018, Adam <Adam@sigterm.info>
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -22,30 +22,14 @@
  * (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS
  * SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  */
-package net.runelite.api.events;
+package net.runelite.cache.script;
 
-import javax.annotation.Nullable;
-import lombok.Value;
-import net.runelite.api.clan.ClanChannel;
-
-/**
- * An event fired when the local player joins or leaves a clan channel.
- */
-@Value
-public class ClanChannelChanged
+public class RuneLiteInstructions extends Instructions implements RuneLiteOpcodes
 {
-	/**
-	 * The clan channel
-	 */
-	@Nullable
-	private final ClanChannel clanChannel;
-	/**
-	 * The clan id, or -1 for guest clan
-	 * @see net.runelite.api.clan.ClanID
-	 */
-	private int clanId;
-	/**
-	 * Whether or not this was the guest clan channel
-	 */
-	private boolean guest;
+	@Override
+	public void init()
+	{
+		super.init();
+		add(RUNELITE_EXECUTE, "runelite_callback");
+	}
 }
