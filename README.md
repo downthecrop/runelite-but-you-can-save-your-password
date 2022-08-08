@@ -1,6 +1,8 @@
 ![](https://runelite.net/img/logo.png)
 # RuneLite But You Can Save Your Password (BYCSYP) [![CI](https://github.com/downthecrop/runelite-but-you-can-save-your-password/actions/workflows/CI.yml/badge.svg?branch=1.7.24)](https://github.com/downthecrop/runelite-but-you-can-save-your-password/actions/workflows/CI.yml)
 
+# Officially Deprecated Aug 8, 2022
+
 RuneLite is a free, open source OldSchool RuneScape client... that didn't let you save your password and now you can!
 
 The official stance from the RuneLite team is that this isn't a feature they are interested in adding (See [#13652](https://github.com/runelite/runelite/pull/13652) and [#249](https://github.com/runelite/plugin-hub/pull/249)) That's completely fine! We can create a fork of the project!
